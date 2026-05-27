@@ -1,0 +1,82 @@
+name: 🐛 Bug report
+description: Something doesn't work as expected.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file this. The more reproducible your bug, the faster it gets fixed.
+
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      description: Output of `npm view react-wizard-engine version` or the version in your `package.json`.
+      placeholder: 0.1.16
+    validations:
+      required: true
+
+  - type: dropdown
+    id: react-version
+    attributes:
+      label: React version
+      options:
+        - "18.x"
+        - "19.x"
+        - other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: entry
+    attributes:
+      label: Which entry are you importing from?
+      multiple: true
+      options:
+        - "react-wizard-engine (main)"
+        - "react-wizard-engine/shadcn"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect? What actually happened? Include stack traces if you have them.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: Minimal code snippet OR a link to a CodeSandbox / StackBlitz / GitHub repo with the issue isolated. The shortest possible repro that still fails.
+      placeholder: |
+        ```tsx
+        import { WizardProvider, ... } from 'react-wizard-engine';
+        // ...minimal code that reproduces the bug
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS, bundler (Next.js / Vite / Webpack), Tailwind version if applicable.
+      placeholder: |
+        - OS: macOS 14
+        - Browser: Chrome 130
+        - Bundler: Next.js 15 / Vite 5
+        - Tailwind: 4.0
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I searched [existing issues](https://github.com/knazark/react-wizard-engine-issues/issues?q=is%3Aissue) for the same bug.
+          required: true
+        - label: I'm using the latest published version of `react-wizard-engine`.
+          required: true

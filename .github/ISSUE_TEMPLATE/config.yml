@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📦 npm package
+    url: https://www.npmjs.com/package/react-wizard-engine
+    about: View the published package, install commands, and changelog.
+  - name: 🎯 Live demo
+    url: https://react-wizard-engine.vercel.app/
+    about: Try react-wizard-engine in your browser — 5 example patterns.
+  - name: 💖 Sponsor the maintainer
+    url: https://github.com/sponsors/knazark
+    about: Sponsorship funds active maintenance and prioritized issue triage.

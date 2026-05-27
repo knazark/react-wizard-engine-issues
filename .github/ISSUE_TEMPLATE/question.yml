@@ -1,0 +1,34 @@
+name: ❓ Question
+description: Ask how to do something with the library.
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question about how to use `react-wizard-engine`? Ask here. Before posting, please check the [README](https://github.com/knazark/react-wizard-engine-issues#readme) Common Patterns section and the [live demo](https://react-wizard-engine.vercel.app/) — they cover most "how do I X" questions.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you want to do?
+      description: Describe what you're trying to build, and where you're stuck.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Code snippet showing your current approach. Helps people answer faster.
+      render: tsx
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I checked the [Common patterns](https://www.npmjs.com/package/react-wizard-engine) section in the npm README.
+          required: true
+        - label: I looked at the [live demo](https://react-wizard-engine.vercel.app/) to see if my pattern is covered there.
+          required: true

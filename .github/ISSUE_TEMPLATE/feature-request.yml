@@ -1,0 +1,53 @@
+name: 💡 Feature request
+description: Suggest a new capability or improvement.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. The more concrete the use case, the more likely it ships.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe what you're trying to do that's hard or impossible today. Not "I want X" but "when I'm doing X, the current API forces me into Y, which is awkward because Z."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed API or behavior
+      description: How would you want to use this? Sketch the call site, the prop, the hook.
+      render: tsx
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What workarounds have you tried with the current API? Why aren't they enough?
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Which entry would this affect?
+      multiple: true
+      options:
+        - Core engine (react-wizard-engine)
+        - Styled adapter (react-wizard-engine/shadcn)
+        - TypeScript types
+        - Documentation
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I searched [existing issues](https://github.com/knazark/react-wizard-engine-issues/issues?q=is%3Aissue) for similar requests.
+          required: true
