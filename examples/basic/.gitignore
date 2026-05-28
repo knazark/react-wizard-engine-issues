@@ -1,0 +1,10 @@
+node_modules
+dist
+.vite
+*.log
+.DS_Store
+
+# TypeScript build artifacts (from `tsc -b` in composite project)
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
